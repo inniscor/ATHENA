@@ -104,4 +104,8 @@ public class PublicAuditMessage {
     public String toString() {
         return "AuditMessage{" + "id=" + id + "dateTime=" + dateTime + "User=" + user + "Action=" + action + "Resource=" + resource + "Message=" + message + '}';
     }
+
+    public String toLogString() {
+        return "AuditMessage{" + "id=" + id + ", dateTime=" + dateTime + ", User=" + user + ", Action=" + action + ", Resource=" + resource + ", Message=" + message + '}';
+    }
 }
