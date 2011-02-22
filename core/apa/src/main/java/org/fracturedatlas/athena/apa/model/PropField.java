@@ -38,8 +38,11 @@ import org.apache.commons.collections.ListUtils;
 import org.fracturedatlas.athena.id.IdAdapter;
 import org.hibernate.annotations.Type;
 import org.fracturedatlas.athena.client.PField;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
+//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Table(name = "PROP_FIELDS")
 public class PropField extends TixEntity implements Serializable {
 

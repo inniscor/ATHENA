@@ -455,6 +455,8 @@ public class JpaApaAdapter extends AbstractApaAdapter implements ApaAdapter {
         EntityManager em = this.emf.createEntityManager();
         try {
             Query query = em.createQuery("FROM PropField pf where pf.name=:name");
+            query.setHint("org.hibernate.cacheable", true);
+
             query.setParameter("name", name);
 
             try {
